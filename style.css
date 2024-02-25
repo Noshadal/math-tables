@@ -22,8 +22,8 @@
     gap: 15px;
     align-items: center;
     flex-direction: column;
-    height: 75vh;
-    width: 40vw;
+    min-height: 75vh;
+    min-width: 40vw;
     border-radius: 20px;
     box-shadow: -27px 19px 34px -14px rgba(6, 25, 28, 1) inset;
     -webkit-box-shadow: -27px 19px 34px -14px rgba(6, 25, 28, 1) inset;
@@ -35,16 +35,13 @@
 }
 
 #result {
+    transition-duration: .7s;
     margin-top: 10px;
-    /* margin: 10px 20px; */
     height: 45vh;
-    width: 30vw;
-    padding-left: 100px;
-    margin-left: 5px;
-    /* position: absolute; */
-    /* left: 25px; */
-    /* padding: 5vw 10vw; */
-    overflow: auto;
+    max-width: 100%;
+    padding: 0px 40px;
+    min-width: 20%;
+    overflow: hidden;
     box-shadow: -20px 19px 34px -14px rgba(6, 25, 28, 1);
     -webkit-box-shadow: -20px 19px 24px -14px rgba(6, 25, 28, 1);
     -moz-box-shadow: -20px 19px 30px -14px rgba(6, 25, 28, 1);
@@ -67,11 +64,52 @@
     background: linear-gradient(152deg, #00e4b5 10%, #29cd35 10%, #14657c 10%, #20d084 10%, #177f9a 70%, #a8ecf6 5%);
     background: -webkit-linear-gradient(152deg, #00e4b5 10%, #29cd35 10%, #14657c 10%, #20d084 10%, #177f9a 70%, #a8ecf6 5%);
     background: -moz-linear-gradient(152deg, #00e4b5 10%, #29cd35 10%, #14657c 10%, #20d084 10%, #177f9a 70%, #a8ecf6 5%);
-    ;
+transition-duration: 1s;
+}
+button{
+    animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
 }
 
+@keyframes example {
+    0%   {
+        color: #16b4dc;
+        
+        rotate: 0deg; 
+        height: 60vh;
+        width: 50vw;
+    }
+    25%  {scale: 1;
+        color: #15f597;
+        rotate: 120deg;
+        height: 30vh;
+        width: 40vw;
+    }
+    50%  {scale: .2;
+        color: #000000;
+        rotate: 240deg;
+        height: 20vh;
+        width: 30vw;
+       
+    
+    }
+
+    100% {scale: 1;color: 
+        #d3e0d2;
+        rotate: 360deg;
+        
+    }
+    
+  }
+button:hover{
+    scale: 1.099;
+    color: white;
+    rotate: 360deg;
+}
 h3 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 900;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
@@ -80,34 +118,50 @@ h3 {
 }
 
 .java {
-    font-size: 20px;
-    padding: 5px;
-    width: 20vw;
+
+    font-size: 10px;
+
+    /* overflow: hidden; */
+    padding: 2px;
+    min-width: 100%;
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 10px;
     color: #f1ffef;
-    text-shadow: 6px 3px 3px rgba(0,0,0,0.6);
-        background-color: #166d76;
+    text-shadow: 6px 3px 3px rgba(0, 0, 0, 0.6);
+    background-color: #166d76;
     background: linear-gradient(136deg, #166d76 20%, #16b4dc 25%, #0f833b 35%, #095b5d 45%, #109d50 115%, #209f20 500%);
     background: -webkit-linear-gradient(136deg, #166d76 20%, #16b4dc 25%, #0f833b 35%, #095b5d 45%, #109d50 115%, #209f20 500%);
-    background: -moz-linear-gradient(136deg, #166d76 20%, #16b4dc 25%, #0f833b 35%, #095b5d 45%, #109d50 115%, #209f20 500%);;
- 
+    background: -moz-linear-gradient(136deg, #166d76 20%, #16b4dc 25%, #0f833b 35%, #095b5d 45%, #109d50 115%, #209f20 500%);
+    ;
+
 }
+
+#result:hover{
+    overflow: auto;
+
+}
+
 @media screen and (max-width: 650px) {
-    .main{
+    .main {
         height: 90vh;
         width: 80vw;
     }
-    .java{
-        font-size: 14px;
+
+    .java {
+        font-size: 10px;
+        min-width: 100%;
+        padding: 2;
+        display: flex;
+        justify-content: center;
+        margin: 5;
     }
-    #result{
-        height: 45vh;
-        width: 40vw;
-        padding-left: 70px;
+
+    #result {
+        overflow: auto;
+        min-width: 40%;
+        /* padding-left: 10px; */
         margin-left: 5px;
 
     }

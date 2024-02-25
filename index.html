@@ -1,65 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Math Table genrater</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="contaner">
         <div class="main">
             <h3>Math Table</h3>
             <input type="number" placeholder="Inter your Table" id="c">
-            <input type="number" placeholder="Inter your Table" id="d" value="10">
+            <input type="number" placeholder="Inter number of Table" id="d" value="10">
             <button onclick="genert()" class="daba">Genrate Table</button>
             <div id="result"></div>
             <script src="scrip.js"></script>
         </div>
     </div>
-    </body>
-</html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JavaScript Example</title>
-<style>
-/* CSS styles */
-#result {
-    margin-top: 10px;
-}
-</style>
-</head>
-<body>
-<input type="number" id="c" placeholder="Enter a number">
-<input type="number" id="d" placeholder="Enter a number">
-<button id="generateBtn">Generate Table</button>
-<div id="result"></div>
-
-<script>
-document.getElementById("generateBtn").addEventListener("click", function() {
-    var b = document.getElementById("c").value;
-    var d = document.getElementById("d").value;
-    var resultDiv = document.getElementById("result");
-    resultDiv.innerHTML = ""; // Clear previous content
-    
-    if (d > 20) {
-        b = 1; // Set b to 1 if d is greater than 20
-    }
-    
-    for (let a = 1; a <= d; a++) {
-        resultDiv.innerHTML += b + " x " + a + " = " + b*a + "<br>";
-    }
-    updateUrl(b, d); // Update URL without refreshing
-});
-
-function updateUrl(b, d) {
-    var url = window.location.href.split('?')[0]; // Get the current URL without query string
-    var newUrl = url + "?c=" + encodeURIComponent(b) + "&d=" + encodeURIComponent(d); // Create new URL with query string
-    window.history.pushState({path:newUrl},'',newUrl); // Push new URL to browser history
-}
-</script>
 </body>
-</html> -->
+
+</html>
